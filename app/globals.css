@@ -1,0 +1,77 @@
+:root {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --bg: #f6f8f6;
+  --surface: #fff;
+  --surface-subtle: #f2f5f3;
+  --surface-strong: #e8efeb;
+  --ink: #17211b;
+  --text: #33423a;
+  --muted: #647169;
+  --soft: #65736b;
+  --line: #dfe5e1;
+  --line-strong: #ccd6d0;
+  --field-line: #7d8c83;
+  --accent: #176f4d;
+  --accent-hover: #0f5b3e;
+  --accent-soft: #e5f2ea;
+  --danger: #b84f43;
+  --danger-soft: #faece9;
+  --warning: #956317;
+  --warning-soft: #fff4d8;
+  --focus: #2d8a67;
+  --sidebar: 236px;
+  --radius: 10px;
+  --z-nav: 20;
+  --z-overlay: 40;
+  --z-modal: 50;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  transition:
+    background-color 0.16s ease,
+    color 0.16s ease,
+    border-color 0.16s ease,
+    transform 0.12s ease;
+}
+
+button:active,
+a:active {
+  transform: translateY(1px);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #d5eadb;
+  color: #173e2c;
+}
