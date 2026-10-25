@@ -1,0 +1,724 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0 24px;
+}
+.header h1 {
+  margin: 0 0 8px;
+}
+.header p {
+  margin: 0;
+  color: var(--muted);
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+.summary > div {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 12px;
+}
+.summary span,
+.summary small {
+  display: block;
+  color: var(--muted);
+}
+.summary strong {
+  display: block;
+  font-size: clamp(20px, 2vw, 28px);
+  margin: 8px 0;
+  font-variant-numeric: tabular-nums;
+}
+.summary small {
+  font-size: 13px;
+}
+.notice {
+  padding: 14px 16px;
+  background: var(--surface-subtle);
+  border-radius: 8px;
+  line-height: 1.5;
+}
+.section {
+  margin-top: 28px;
+}
+.section h2 {
+  font-size: 21px;
+  margin-bottom: 14px;
+}
+.bill {
+  padding: 24px;
+  background: var(--surface);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+.bill h2 {
+  margin: 0 0 8px;
+}
+.bill p {
+  color: var(--muted);
+}
+.fields {
+  min-width: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.fields label,
+.addForm label {
+  min-width: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+}
+.fields input,
+.fields select,
+.fields textarea,
+.addForm input,
+.addForm textarea,
+.addForm select,
+.search {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--surface);
+}
+.billLine {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  align-items: start;
+  gap: 12px;
+  padding-bottom: 14px;
+}
+.lineActions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+}
+.lineActions button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.fields .check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.check input {
+  width: 20px;
+  min-height: 20px;
+}
+.billFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.billFooter > strong {
+  font-size: 22px;
+}
+.addForm {
+  display: grid;
+  gap: 18px;
+}
+.addForm details {
+  padding-top: 4px;
+}
+.addForm details[open] summary {
+  margin-bottom: 18px;
+}
+.two {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+.search {
+  max-width: 560px;
+  margin: 0 0 20px;
+}
+.carList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 14px;
+}
+.carLink {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 22px;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--surface);
+  border-radius: 12px;
+}
+.carLink:hover {
+  background: var(--surface-subtle);
+}
+.carLink strong {
+  overflow-wrap: anywhere;
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.carLink span,
+.carLink small {
+  display: block;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.history {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+.history article {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  background: var(--surface);
+  padding: 18px;
+  border-radius: 10px;
+}
+.history p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 6px 0;
+}
+.history small {
+  color: var(--muted);
+}
+.history article > strong {
+  white-space: nowrap;
+}
+.header > div {
+  min-width: 0;
+}
+.header h1,
+.header p {
+  overflow-wrap: anywhere;
+}
+.header .carContact {
+  margin-top: 6px;
+}
+.header p + .actions {
+  margin-top: 16px;
+}
+.header .actions {
+  align-items: stretch;
+}
+.section > p {
+  line-height: 1.55;
+}
+.section > summary {
+  min-height: 44px;
+  cursor: pointer;
+  padding-block: 12px;
+}
+.addForm {
+  margin-top: 18px;
+}
+.history article > div {
+  min-width: 0;
+}
+.history article strong {
+  overflow-wrap: anywhere;
+}
+.costStory {
+  margin: 22px 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.costStoryHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.costStoryHeading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.costStory a {
+  color: var(--accent);
+}
+.jobEquation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+.jobEquation span,
+.jobEquation small {
+  display: block;
+}
+.jobEquation > div > span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.jobEquation strong {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.jobEquation small {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.jobEquation .equationSign {
+  padding-top: 25px;
+  color: var(--muted);
+  font-size: 23px;
+}
+.jobResult strong {
+  color: var(--ink);
+}
+.jobEquation [data-money-tone="in"] strong,
+.moneyFacts [data-money-tone="in"] dd,
+.receiptAmount {
+  color: #188452;
+}
+.jobEquation [data-money-tone="out"] strong,
+.moneyFacts [data-money-tone="out"] dd,
+.costAmount {
+  color: #c53c43;
+}
+.costAction:global(.button.secondary),
+.costAction:global(.button.primary) {
+  background: #fff0f0;
+  color: #b82f38;
+  border-color: #edbdc1;
+}
+.costAction:global(.button.secondary):hover,
+.costAction:global(.button.primary):hover {
+  background: #ffe4e6;
+  color: #9f2730;
+  border-color: #de929a;
+}
+.storyNote {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 17px 0 0;
+}
+.moneyFacts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.moneyFacts dt {
+  font-size: 13px;
+  color: var(--muted);
+}
+.moneyFacts dd {
+  margin: 6px 0;
+  font-size: 20px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.moneyFacts small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: 12px;
+}
+.cashDetails {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+}
+.cashDetails summary {
+  padding: 16px 0 0;
+  cursor: pointer;
+  min-height: 44px;
+}
+.cashDetails .moneyFacts {
+  border: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0;
+}
+.cashDetails > p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+@media (max-width: 760px) {
+  .costStory {
+    padding: 18px;
+  }
+  .moneyFacts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .jobEquation {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .jobEquation > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    column-gap: 12px;
+  }
+  .jobEquation strong {
+    font-size: 22px;
+    margin: 0;
+  }
+  .jobEquation small {
+    grid-column: 1 / -1;
+  }
+  .jobEquation .equationSign {
+    display: none;
+  }
+  .jobResult {
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+  .cashDetails .moneyFacts {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .summary > div {
+    padding: 16px;
+  }
+  .bill {
+    padding: 18px;
+  }
+  .header > .actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .actions :global(.button) {
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+  .summary strong {
+    font-size: clamp(18px, 4.6vw, 25px);
+    overflow-wrap: anywhere;
+  }
+  .summary {
+    gap: 8px;
+  }
+  .fields input,
+  .fields select,
+  .addForm input,
+  .addForm select {
+    font-size: 16px;
+  }
+}
+@media (max-width: 430px) {
+  .billLine,
+  .two {
+    grid-template-columns: 1fr;
+  }
+  .history article {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .billFooter > .actions {
+    width: 100%;
+  }
+  .billFooter .actions > button {
+    flex: 1;
+  }
+  .addForm > .actions > button {
+    flex: 1;
+  }
+}
+
+/* Cars browsing: search, view switch and customer groups */
+.browseBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin: 0 0 22px;
+}
+.browseSearch {
+  flex: 1 1 320px;
+  max-width: 600px;
+  min-width: 0;
+}
+.viewSwitch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--surface-strong);
+}
+.viewSwitch a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 7px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.viewSwitch a:hover {
+  color: var(--ink);
+}
+.viewSwitch a[aria-current="page"] {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: 0 1px 3px #132c211a;
+}
+.viewSwitch a:focus-visible,
+.customerList a:focus-visible,
+.carLink:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.customerList {
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.customerRow,
+.noCustomerRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 64px;
+  padding: 12px 16px 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+.customerRow:hover,
+.noCustomerRow:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-subtle);
+}
+.noCustomerRow {
+  border: 1px dashed var(--line-strong);
+  background: transparent;
+}
+.noCustomerRow .customerName strong {
+  color: var(--text);
+}
+.customerRow > svg,
+.noCustomerRow > svg {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+.customerName {
+  flex: 1;
+  min-width: 0;
+}
+.customerName strong {
+  display: block;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+.customerName small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.carCount {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.groupHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 20px;
+  margin: 4px 0 18px;
+}
+.groupHead > div:first-child {
+  min-width: 0;
+}
+.groupHead h2 {
+  margin: 0;
+  font-size: 26px;
+  overflow-wrap: anywhere;
+}
+.groupHead p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+.resultSection + .resultSection {
+  margin-top: 26px;
+}
+.resultSection h2 {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 650;
+}
+@media (max-width: 560px) {
+  .viewSwitch {
+    width: 100%;
+  }
+  .viewSwitch a {
+    flex: 1;
+    justify-content: center;
+  }
+  .customerRow,
+  .noCustomerRow {
+    padding: 12px 12px 12px 16px;
+  }
+}
+.editCar:global(.button.secondary) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Person page: edit and linked cars */
+.personActions {
+  margin-top: 10px;
+}
+.personCars {
+  display: grid;
+  gap: 16px;
+  margin: 0 0 22px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+.personCars h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+.personCars h2 a {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+.carChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.carChips a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 650;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.carChips a:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.carChips a:focus-visible,
+.personCars h2 a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.togetherButton:global(.button.secondary) {
+  min-height: 48px;
+  padding: 0 16px;
+  font-size: 15px;
+}
+.suggestion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  max-width: 760px;
+  margin: 0 0 12px;
+  padding: 12px 16px;
+  border: 1px dashed var(--field-line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.suggestion > span {
+  flex: 1 1 260px;
+  min-width: 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.suggestion strong {
+  color: var(--ink);
+}
+.suggestion button:not(:global(.button)) {
+  min-height: 40px;
+  padding: 0 8px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.movedNote {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+}
+.movedNote a {
+  color: var(--accent);
+  font-weight: 700;
+}

@@ -1,0 +1,139 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-bottom: 24px;
+}
+.balance {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.balance > div {
+  display: grid;
+  gap: 8px;
+}
+.balance strong {
+  font-size: 30px;
+  font-variant-numeric: tabular-nums;
+}
+.balance p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.related {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 24px;
+}
+.related a {
+  min-height: 44px;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 16px;
+  padding-top: 16px;
+}
+.filters label {
+  display: grid;
+  gap: 6px;
+}
+.filters input,
+.filters select {
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+}
+.count {
+  color: var(--muted);
+  margin: 20px 0 8px;
+}
+.list {
+  background: var(--surface);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 20px;
+  gap: 16px;
+  align-items: center;
+  padding: 20px;
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+.row:last-child {
+  border-bottom: 0;
+}
+.row:hover,
+.row:focus-visible {
+  background: var(--surface-subtle);
+}
+.record,
+.amount {
+  display: grid;
+  gap: 5px;
+}
+.record {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.record strong {
+  font-size: 17px;
+}
+.record small,
+.amount small {
+  font-size: 13px;
+  color: var(--muted);
+}
+.amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.amount strong {
+  font-size: 18px;
+}
+.amount span {
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .actions {
+    gap: 12px;
+  }
+  .row {
+    grid-template-columns: minmax(0, 1fr) minmax(108px, 40%);
+    padding: 16px 12px;
+    gap: 12px;
+  }
+  .row > svg {
+    display: none;
+  }
+  .record strong {
+    font-size: 16px;
+  }
+  .amount strong {
+    font-size: 16px;
+  }
+  .filters label {
+    flex: 1;
+    min-width: 130px;
+  }
+  .filters input,
+  .filters select {
+    min-width: 0;
+    width: 100%;
+  }
+}

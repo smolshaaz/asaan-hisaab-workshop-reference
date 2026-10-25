@@ -1,0 +1,352 @@
+/* Add / edit car dialog: one calm column, actions always reachable. */
+.dialog {
+  background: var(--surface);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+.head {
+  padding: 24px 24px 4px;
+}
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.lead {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 18px 24px 22px;
+}
+.fields {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 20px;
+}
+.field {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  gap: 8px;
+}
+.label,
+.sectionBody label {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 650;
+}
+.sectionBody label {
+  min-width: 0;
+  display: grid;
+  gap: 7px;
+}
+.fields input,
+.fields textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: 11px 13px;
+  border: 1.5px solid var(--field-line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+.fields textarea {
+  resize: vertical;
+}
+.fields input:hover,
+.fields textarea:hover {
+  border-color: var(--text);
+}
+.fields input:focus-visible,
+.fields textarea:focus-visible {
+  outline: 0;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #176f4d33;
+}
+.fields input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+.fields .plate {
+  min-height: 58px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.fields .plate::placeholder {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 17px;
+}
+.fieldError {
+  margin: 0;
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 500;
+}
+.twin {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--warning-soft);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.twin a {
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.note {
+  margin: -8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Customer picker */
+.options {
+  max-height: 264px;
+  overflow-y: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  background: var(--surface);
+  box-shadow: 0 6px 16px #132c2114;
+}
+.options > button {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  padding: 9px 14px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.options > button:last-child {
+  border-bottom: 0;
+}
+.options > button:hover,
+.options > .active {
+  background: var(--accent-soft);
+}
+.options strong {
+  display: block;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.options small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.options > .addOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.addOption strong {
+  display: inline;
+  font-size: inherit;
+}
+.chosen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 8px 8px 8px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 9px;
+  background: var(--accent-soft);
+}
+.chosenMark {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.chosenText {
+  flex: 1;
+  min-width: 0;
+}
+.chosenText strong {
+  display: block;
+  color: var(--ink);
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+.chosenText small {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+.linkButton,
+.iconButton {
+  flex-shrink: 0;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+}
+.linkButton {
+  padding: 0 10px;
+}
+.iconButton {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+.linkButton:hover,
+.iconButton:hover {
+  background: #fff;
+}
+.linkButton:focus-visible,
+.iconButton:focus-visible,
+.section > summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+.subField {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 650;
+}
+.resolve {
+  padding: 12px 14px;
+  border-radius: 9px;
+  background: var(--warning-soft);
+}
+.resolve p {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.resolve > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.resolve :global(.button) {
+  min-height: 42px;
+  font-size: 14px;
+}
+
+/* Collapsible groups */
+.section {
+  border-top: 1px solid var(--line);
+  padding-top: 4px;
+}
+.section > summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 6px;
+}
+.section > summary::-webkit-details-marker {
+  display: none;
+}
+.section > summary > svg {
+  color: var(--accent);
+  transform: rotate(-90deg);
+  transition: transform 0.15s ease;
+}
+.section[open] > summary > svg {
+  transform: none;
+}
+.sectionBody {
+  display: grid;
+  gap: 16px;
+  padding: 8px 0 4px;
+}
+.sectionBody > div[class] {
+  margin-bottom: 0;
+}
+.pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  gap: 10px;
+  padding: 14px 24px 18px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+.footer :global(.inline-alert) {
+  margin: 0;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.buttons :global(.button) {
+  min-height: 48px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+.buttons .submit {
+  min-width: 150px;
+}
+
+@media (max-width: 480px) {
+  .head {
+    padding: 20px 18px 2px;
+  }
+  .body {
+    padding: 16px 18px 20px;
+  }
+  .footer {
+    padding: 12px 18px 14px;
+  }
+  .pair {
+    grid-template-columns: 1fr;
+  }
+  .buttons .submit {
+    flex: 1;
+    min-width: 0;
+  }
+}

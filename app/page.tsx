@@ -1,5 +1,5 @@
-import { ReferenceWorkspace } from "@/components/reference-workspace";
+import { redirect } from "next/navigation";
 
-export default function Page() {
-  return <ReferenceWorkspace />;
+export default function Home() {
+  redirect("/dashboard");
 }

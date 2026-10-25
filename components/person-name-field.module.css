@@ -1,0 +1,96 @@
+.root {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 14px;
+}
+.root > label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+}
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  background: var(--surface);
+  padding: 0 14px;
+}
+.inputWrap:focus-within {
+  outline: 2px solid var(--money-tone, var(--accent));
+  outline-offset: 2px;
+}
+.inputWrap > svg {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.inputWrap > input {
+  width: 100%;
+  min-width: 0;
+  min-height: 54px;
+  border: 0 !important;
+  outline: 0 !important;
+  padding: 12px 0 !important;
+  background: transparent;
+  font: inherit;
+  font-size: 17px;
+  color: var(--ink);
+}
+.inputWrap > .selected {
+  color: var(--money-tone, var(--accent));
+}
+.options {
+  position: relative;
+  z-index: 8;
+  max-height: 210px;
+  overflow: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  margin-top: 6px;
+  background: var(--surface);
+  box-shadow: 0 4px 12px #132c2110;
+}
+.options > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+.options > button:last-child {
+  border-bottom: 0;
+}
+.options > button:hover,
+.options > button:focus-visible,
+.options > .active {
+  background: var(--money-tone-soft, #edf7f1);
+  outline: 0;
+}
+.options strong {
+  display: block;
+  font-size: 15px;
+}
+.options small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.hint {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}

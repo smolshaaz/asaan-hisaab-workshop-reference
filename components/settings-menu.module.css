@@ -1,0 +1,71 @@
+.page {
+  max-width: 1160px;
+}
+.groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+.groups section {
+  min-width: 0;
+}
+.groups h2 {
+  margin-bottom: 14px;
+}
+.links {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.links a {
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  min-height: 84px;
+}
+.links a + a {
+  border-top: 1px solid var(--line);
+}
+.links a:hover {
+  background: var(--accent-soft);
+}
+.links a span {
+  flex: 1;
+  min-width: 0;
+}
+.links strong,
+.links small {
+  display: block;
+}
+.links strong {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.links small {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.links svg {
+  flex-shrink: 0;
+}
+.advanced {
+  margin-top: 28px;
+}
+.advanced summary {
+  cursor: pointer;
+  padding-block: 14px;
+  color: var(--muted);
+  font-size: 15px;
+}
+@media (max-width: 1000px) {
+  .groups {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+}

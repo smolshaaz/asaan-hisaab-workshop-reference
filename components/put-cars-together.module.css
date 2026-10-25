@@ -1,0 +1,224 @@
+/* Put cars together: choice rows, destination and summary. */
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.helpLink {
+  flex-shrink: 0;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.helpLink:hover {
+  background: var(--accent-soft);
+}
+.helpLink:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+.body {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+.body > :global(.inline-alert) {
+  margin: 0;
+}
+.choices {
+  display: grid;
+  gap: 8px;
+}
+.groupLabel {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 56px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.choice:hover {
+  border-color: var(--field-line);
+}
+.choice[data-checked] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.choice:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.choice input {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.choice input:focus-visible {
+  outline: 0;
+}
+.choiceText {
+  flex: 1;
+  min-width: 0;
+}
+.choiceText strong {
+  display: block;
+  color: var(--ink);
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.choiceText small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.choiceText .plates {
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.quiet {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.destination {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 14px 0 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+.destination legend {
+  float: left;
+  width: 100%;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+}
+.destination .choice input {
+  border-radius: 50%;
+}
+.summary {
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface-subtle);
+}
+.summary strong {
+  display: block;
+  color: var(--ink);
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.summary p {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-size: 15px;
+}
+.instruction {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Result message, history and conflicts on the customer's car list */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 10px;
+  background: var(--accent-soft);
+}
+.banner strong {
+  color: var(--ink);
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.history {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.history h3 {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 650;
+}
+.history ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.history li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 14px;
+  padding: 6px 0;
+}
+.history li + li {
+  border-top: 1px solid var(--line);
+}
+.history li > span {
+  min-width: 0;
+}
+.history strong {
+  display: block;
+  color: var(--ink);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.history small {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+.conflict p {
+  margin: 0;
+}
+.conflict ul {
+  margin: 6px 0;
+  padding-left: 20px;
+}
+.conflict a {
+  font-weight: 700;
+}
