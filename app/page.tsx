@@ -1,5 +1,10 @@
-import { redirect } from "next/navigation";
+import WorkspaceLayout from "./(workspace)/layout";
+import DashboardPage from "./(workspace)/dashboard/page";
 
 export default function Home() {
-  redirect("/dashboard");
+  return (
+    <WorkspaceLayout>
+      <DashboardPage />
+    </WorkspaceLayout>
+  );
 }

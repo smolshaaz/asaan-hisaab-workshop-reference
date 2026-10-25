@@ -34,7 +34,8 @@ const documentNav = [
   { label: "Supplier bills", href: "/bills", icon: ShoppingBag },
 ];
 export function AppShell({ children }: { children: React.ReactNode }) {
-  const path = usePathname();
+  const route = usePathname();
+  const path = route === "/" ? "/dashboard" : route;
   const { data, error, refresh } = useProduct();
   const [open, setOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
